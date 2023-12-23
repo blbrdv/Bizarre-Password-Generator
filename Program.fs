@@ -1,2 +1,10 @@
-﻿// For more information see https://aka.ms/fsharp-console-apps
-printfn "Hello from F#"
+﻿open BPG.Generator
+
+[<EntryPoint>]
+let main (args : string[]) =
+    args[0]
+    |> int
+    |> generate
+    |> printf "%s"
+
+    0
