@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "bizarre-password-generator", "bizarre-password-generator.fsproj", "{27093EC0-8C9D-47F3-886A-0B1864E800B3}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "bpg", "bpg.fsproj", "{27093EC0-8C9D-47F3-886A-0B1864E800B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
