@@ -1,21 +1,18 @@
 module BPG.Generator
-open Glyphs
 open System
-open System.Collections.Generic
 
-let generate (length : int) =
-    let shuffledArray =
-        glyphs 
-        |> Seq.sortBy (fun _ -> Guid.NewGuid())
-        |> Queue
-
+let generate (pack : string list) (length : int) : string =
     let rec generateString (value : string) (length : int) =
         if value.Length > length then
             value
         elif value.Length = length then
             value[..length]
         else
-            $"{value}{shuffledArray.Dequeue()}"
+            let shuffledArray =
+                pack 
+                |> List.sortBy (fun _ -> Guid.NewGuid())
+                
+            $"{value}{shuffledArray[0]}"
             |> generateString
             <| length
     
