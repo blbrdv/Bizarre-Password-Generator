@@ -1,22 +1,17 @@
-﻿open Argu
+﻿open System
 open BPG.Generator
-open BPG.Arguments
-open BPG.Glyphs
 
 [<EntryPoint>]
-let main (argsRaw : string[]) =
-    let parser = ArgumentParser.Create<CliArguments>(programName = "bpg.exe",
-                                                    checkStructure = false)
-    let args = parser.ParseCommandLine(raiseOnUsage = true)
-    let mutable pack = []
+let main (args : string[]) =
+    let length =
+        args[0]
+        |> int
     
-    if args.Contains SpecialSymbols then
-        pack <- glyphs
-    else
-        pack <- glyphs @ glyphsSpecial
+    if length < 1 then
+        raise (new ArgumentOutOfRangeException("Length must be grater than 0"))
     
-    args.GetResult Length
-    |> generate pack
+    length
+    |> generate
     |> printfn "%s"
 
     0

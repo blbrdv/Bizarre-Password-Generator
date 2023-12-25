@@ -7,4 +7,4 @@
 > is not for you.
 
 ## Run
-For executing programm see [this](/Arguments.fs).
+Run `bpg.exe N` where `N` is password length.

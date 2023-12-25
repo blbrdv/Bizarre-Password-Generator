@@ -7,15 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Glyphs.fs" />
+        <Compile Include="Chords.fs" />
         <Compile Include="Generator.fs" />
-        <Compile Include="Arguments.fs" />
         <Compile Include="Program.fs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Argu" Version="6.1.4" />
-      <PackageReference Include="CommandLineParser" Version="2.9.1" />
     </ItemGroup>
 
 </Project>
